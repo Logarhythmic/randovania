@@ -624,7 +624,7 @@
                     "type": "resource",
                     "data": {
                         "type": "events",
-                        "name": "Event10",
+                        "name": "Event8",
                         "amount": 1,
                         "negate": false
                     }
@@ -1044,7 +1044,8 @@
             3
         ],
         "SpringBallJump": [
-            1
+            1,
+            2
         ],
         "DBoost": [
             1

@@ -37,7 +37,7 @@ Extra - save_index: 0
 
 > Event - Win Game; Heals? False
   * Layers: default
-  * Event Defeat Mother Brain
+  * Event Win Game
   > Landing Site Save Station
       Trivial
 
@@ -71,7 +71,7 @@ Extra - save_index: 0
               Morph Ball
               Morph Ball Bombs or Power Bombs
   > Event - Win Game
-      After Win Game
+      After Defeat Mother Brain
 
 ----------------
 Crateria Tube
@@ -278,8 +278,13 @@ Extra - asset_id: 6
       Any of the following:
           All of the following:
               Gravity Suit
-              Hi-Jump Boots or Space Jump or Wall Jumps (Beginner)
-          Hi-Jump Boots and Morph Ball and Spring Ball
+              Any of the following:
+                  # With Wall Jumps: https://youtu.be/6tyDDiNLY_o
+                  Hi-Jump Boots or Space Jump or Wall Jumps (Beginner)
+                  # 2 Tap Shinespark: https://youtu.be/a8-2ZAwcMos
+                  Speed Booster and Shinespark (Beginner) and Short Charge (Intermediate)
+          # Spring Ball Jump: https://youtu.be/bVy_2LRx0IU
+          Hi-Jump Boots and Morph Ball and Spring Ball and Spring Ball Jump (Intermediate)
 
 > Door to Forgotten Highway Kago Room; Heals? False
   * Layers: default
@@ -323,8 +328,15 @@ Extra - asset_id: 8
   > Door to Forgotten Highway Kago Room
       All of the following:
           Morph Ball
-          # With Wall Jumps: https://youtu.be/Z_vt91bLKeA
-          Hi-Jump Boots or Space Jump or Wall Jumps (Beginner)
+          Any of the following:
+              # With Wall Jumps: https://youtu.be/Z_vt91bLKeA
+              Hi-Jump Boots or Space Jump or Wall Jumps (Beginner)
+              All of the following:
+                  Gravity Suit and Speed Booster and Shinespark (Beginner)
+                  Any of the following:
+                      Short Charge (Intermediate)
+                      # No short charge means you have to charge into the next room.
+                      Disabled Door Lock Randomizer and Disabled Entrance Randomizer
 
 ----------------
 Forgotten Highway Elbow
@@ -794,7 +806,7 @@ Extra - asset_id: 27
           Morph Ball
           Any of the following:
               Grapple Beam or Space Jump
-              Damage Boosting (Beginner) and Normal Damage ≥ 121
+              Damage Boosting (Beginner) and Normal Damage ≥ 61
 
 > Door to Climb (North); Heals? False
   * Layers: default
@@ -804,7 +816,7 @@ Extra - asset_id: 27
           Morph Ball
           Any of the following:
               Grapple Beam or Space Jump
-              Damage Boosting (Beginner) and Normal Damage ≥ 121
+              Damage Boosting (Beginner) and Normal Damage ≥ 61
 
 ----------------
 Old Mother Brain

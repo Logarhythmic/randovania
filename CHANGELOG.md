@@ -8,8 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [6.3.0] - 2023-10-??
 
 - Added: During generation, if no alternatives have a non-zero weight, try weighting by how many additional Nodes are reachable.
+- Changed: The generator will now consider placing Energy Tanks, if there's a damage requirement that's exactly high enough to kill the player.
+- Fixed: The menu option for viewing all Randovania dependencies and their licenses has been restored.
+- Fixed: The generator should now handle cases with negative requirements a little better.
 
 ### Metroid Dread
+
+- Changed: Exporting games is now significantly faster.
 
 #### Logic Database
 
@@ -40,20 +45,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed: The connection of EMMI Zone Exit Southeast and EMMI Zone Exit West is now a proper door. This enables it to now be shuffled in door lock rando.
 
-### Super Metroid
+### Metroid Prime
 
-#### Logic Database
+- Fixed: Traversing from the Spider Track Bridge to the Quarantine Access A door in Metroid Quarantine A now properly requires the barrier to be removed or `Backwards Lower Mines` to be enabled.
 
-- Added: Two videos for tricks in Crateria have been added to the database.
+### Metroid Prime 2: Echoes
 
-#### Crateria
-
-- Added: Wall-jumps can be used as a method for traversing Crab Maze.
-- Added: Energy requirements are now in place for some shinesparks in Crateria.
-- Added: Crateria Super Missile Room can now be navigated using and advanced shinespark that does not require ice beam.
-- Added: Damage boosting is now an option for traversing the top of Crateria Super Missile Room.
-- Added: Wall jumps and spring ball jumps are now an option to traverse East Ocean.
-- Fixed: A missing node connection in Crateria Power Bomb Room has been restored. 
+- Changed: When Progressive Grapple is enabled, it will now show `2 shuffled copies` rather than `Shuffled` for better consistency.
+- Changed: A proper error message is displayed when mono is not found, when exporting a game on macOS and Linux.
 
 ## [6.2.1] - 2023-09-??
 

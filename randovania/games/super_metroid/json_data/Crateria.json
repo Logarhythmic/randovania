@@ -289,8 +289,8 @@
                     "node_type": "event",
                     "heal": false,
                     "coordinates": {
-                        "x": 1979.492957746479,
-                        "y": 339.53051643192475,
+                        "x": 1979.49,
+                        "y": 339.53,
                         "z": 0.0
                     },
                     "description": "",
@@ -299,7 +299,7 @@
                     ],
                     "extra": {},
                     "valid_starting_location": false,
-                    "event_name": "Event7",
+                    "event_name": "Event8",
                     "connections": {
                         "Landing Site Save Station": {
                             "type": "and",
@@ -615,7 +615,7 @@
                             "type": "resource",
                             "data": {
                                 "type": "events",
-                                "name": "Event8",
+                                "name": "Event7",
                                 "amount": 1,
                                 "negate": false
                             }
@@ -2115,7 +2115,7 @@
                                                             {
                                                                 "type": "or",
                                                                 "data": {
-                                                                    "comment": null,
+                                                                    "comment": "With Wall Jumps: https://youtu.be/6tyDDiNLY_o",
                                                                     "items": [
                                                                         {
                                                                             "type": "resource",
@@ -2143,6 +2143,41 @@
                                                                                 "amount": 1,
                                                                                 "negate": false
                                                                             }
+                                                                        },
+                                                                        {
+                                                                            "type": "and",
+                                                                            "data": {
+                                                                                "comment": "2 Tap Shinespark: https://youtu.be/a8-2ZAwcMos",
+                                                                                "items": [
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "items",
+                                                                                            "name": "SpeedBooster",
+                                                                                            "amount": 1,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "tricks",
+                                                                                            "name": "Shortcharge",
+                                                                                            "amount": 2,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "tricks",
+                                                                                            "name": "Shinespark",
+                                                                                            "amount": 1,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
                                                                         }
                                                                     ]
                                                                 }
@@ -2153,7 +2188,7 @@
                                                 {
                                                     "type": "and",
                                                     "data": {
-                                                        "comment": null,
+                                                        "comment": "Spring Ball Jump: https://youtu.be/bVy_2LRx0IU",
                                                         "items": [
                                                             {
                                                                 "type": "resource",
@@ -2179,6 +2214,15 @@
                                                                     "type": "items",
                                                                     "name": "SpringBall",
                                                                     "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "SpringBallJump",
+                                                                    "amount": 2,
                                                                     "negate": false
                                                                 }
                                                             }
@@ -2520,6 +2564,84 @@
                                                         "name": "WallJump",
                                                         "amount": 1,
                                                         "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "Gravity",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "SpeedBooster",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Shinespark",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "or",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "Shortcharge",
+                                                                                "amount": 2,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "and",
+                                                                            "data": {
+                                                                                "comment": "No short charge means you have to charge into the next room.",
+                                                                                "items": [
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "misc",
+                                                                                            "name": "DoorLockRando",
+                                                                                            "amount": 1,
+                                                                                            "negate": true
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "misc",
+                                                                                            "name": "EntranceRando",
+                                                                                            "amount": 1,
+                                                                                            "negate": true
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -5590,7 +5712,7 @@
                                                                 "data": {
                                                                     "type": "damage",
                                                                     "name": "Normal",
-                                                                    "amount": 121,
+                                                                    "amount": 61,
                                                                     "negate": false
                                                                 }
                                                             },
@@ -5687,7 +5809,7 @@
                                                                 "data": {
                                                                     "type": "damage",
                                                                     "name": "Normal",
-                                                                    "amount": 121,
+                                                                    "amount": 61,
                                                                     "negate": false
                                                                 }
                                                             },
