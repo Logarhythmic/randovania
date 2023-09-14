@@ -225,10 +225,12 @@ Extra - asset_id: 4
       Trivial
   > Pickup (Topmost Missile Expansion)
       Any of the following:
-          Hi-Jump Boots or Space Jump or Knowledge (Intermediate)
+          Hi-Jump Boots or Space Jump
           Speed Booster and Shinespark (Beginner) and Normal Damage ≥ 36
-          # Wall jump off of Trippers
-          Ice Beam and Wall Jumps (Intermediate)
+          All of the following:
+              # Wall jump off of Trippers
+              Wall Jumps (Intermediate)
+              Ice Beam or Knowledge (Beginner)
           # IBJ
           Morph Ball Bombs and Morph Ball and Vertical Infinite Bomb Jump (Intermediate)
   > Pickup (Morph Ball Maze Missile Expansion)
