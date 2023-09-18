@@ -476,9 +476,9 @@ Extra - asset_id: 13
           Damage Boosting (Beginner) and Normal Damage ≥ 101
 =======
           Charge Beam or Missile or Power Bombs or Super Missile
-          Damage Boosting (Beginner) and Normal Damage ≥ 61
+          Damage Boosting (Intermediate) and Normal Damage ≥ 61
           Morph Ball Bombs and Morph Ball
->>>>>>> 9415d5f0b (logic change to green pirate room)
+          Damage Boosting (Beginner) and Normal Damage ≥ 101
 
 > Door to Lower Mushrooms; Heals? False
   * Layers: default
@@ -498,9 +498,9 @@ Extra - asset_id: 13
           Damage Boosting (Beginner) and Normal Damage ≥ 101
 =======
           Charge Beam or Missile or Power Bombs or Super Missile
-          Damage Boosting (Beginner) and Normal Damage ≥ 81
+          Damage Boosting (Intermediate) and Normal Damage ≥ 81
           Morph Ball Bombs and Morph Ball
->>>>>>> 9415d5f0b (logic change to green pirate room)
+          Damage Boosting (Beginner) and Normal Damage ≥ 101
   > Door to Lower Mushrooms
       Trivial
 
