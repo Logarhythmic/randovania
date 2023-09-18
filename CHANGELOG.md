@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed: The menu option for viewing all Randovania dependencies and their licenses has been restored.
 - Fixed: The generator should now handle cases with negative requirements a little better.
 
+### Resolver
+- Fixed: Bug where nested requirements were combined wrongly.
+
 ### Metroid Dread
 
 - Changed: Exporting games is now significantly faster.
@@ -32,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed: Thermal Device Room South: The connections to the thermal door that closes after using the thermal device now logically remains open when door lock rando is disabled and the "Can Slide" and "Shoot Beam" templates are satisfied. This is a handwave that makes the thermal device no longer a dangerous resource.
 - Changed: Single-wall Jump trick in Cataris Teleport to Artaria (Blue) now requires a slide jump.
+- Changed: Exclude Door above First Thermal Device from Door Randomization. Effectively making the First Thermal Device a safe action also when doors are randomized.
 
 ##### Dairon
 
@@ -48,6 +52,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Metroid Prime
 
 - Fixed: Traversing from the Spider Track Bridge to the Quarantine Access A door in Metroid Quarantine A now properly requires the barrier to be removed or `Backwards Lower Mines` to be enabled.
+- Fixed: PAL export with skippable cutscenes
+- Fixed: Flaahgra crash with skippable cutscenes (fingers crossed)
+- Fixed: Warrior shrine loading behavior
+- Changed: Update tournament winner scan in Artifact Temple
 
 ### Metroid Prime 2: Echoes
 
