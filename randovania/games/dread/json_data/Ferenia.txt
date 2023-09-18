@@ -178,8 +178,10 @@ Extra - asset_id: collision_camera_003
   * Layers: default
   > Dock to Teleport to Burenia (Cyan)
       Any of the following:
-          Flash Shift or Gravity Suit or Spider Magnet or Simple IBJ or Use Spin Boost
+          Flash Shift or Gravity Suit or Spider Magnet or Nothing or Simple IBJ or Use Spin Boost
           Grapple Beam and Grapple Movement (Beginner)
+          # Damage Boost (Beginner): https://youtu.be/qIanrM7cc3I
+          Damage Boost (Beginner)
   > Door to EMMI Zone Exit Middle (Power)
       Trivial
   > Door to EMMI Zone Exit Middle (Charge)
