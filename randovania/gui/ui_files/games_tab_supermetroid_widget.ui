@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>409</width>
-    <height>365</height>
+    <width>478</width>
+    <height>427</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="currentIndex">
    <number>3</number>
@@ -93,8 +99,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>486</width>
-         <height>393</height>
+         <width>472</width>
+         <height>395</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_10">
@@ -121,8 +127,8 @@
    <attribute name="title">
     <string>Differences</string>
    </attribute>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
      <widget class="QScrollArea" name="differences_scroll_area">
       <property name="widgetResizable">
        <bool>true</bool>
@@ -132,18 +138,27 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1529</width>
-         <height>342</height>
+         <width>498</width>
+         <height>470</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <widget class="QLabel" name="label">
           <property name="enabled">
            <bool>true</bool>
           </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Randovania makes some changes to the original game in order to improve the game experience or to simply fix bugs in the original game. Many of these changes are optional and can be disabled in the many options Randovania provides, but these are on by default.&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The G4 cutscene is skipped allowing the player immediately enter Tourian after defeating all four bosses.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Elevators and doors are sped up.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;When saving the game, your previous save is backed up to the unused save slots to prevent softlocking.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Samus starts at her ship on Crateria, skipping the introdution cutscene and the Ceres sequence of events.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The transition between Mother Brain's phases are abbreviated.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Some platforms have been placed and several blocks in the game have been changed to shot blocks to prevent softlocks. Rooms affected by these changes include but are not limited to: the Dachora Pit, Early Supers Bridge, Pre Hi-Jump, Moat, Pre Spazer, Red Tower, Nova Boost.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Chozo Statue prior to GT no longer requires Space Jump to activate.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The GT code has been disabled.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The item menu behavoir has been adjusted to be more intuitive.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Spacetime Glitch has been fixed.&lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A bug causing heat damage to interrupt speed booster behavior has been fixed.&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
