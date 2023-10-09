@@ -463,7 +463,7 @@ Extra - asset_id: collision_camera_007
 
 > Pickup (DNA); Heals? False
   * Layers: default
-  * Pickup 187; Category? Minor
+  * Pickup 187; Category? Major
   * Extra - pickup_type: metroid
   * Extra - spawngroup: SG_Alpha_001
   > Start Point
@@ -631,7 +631,7 @@ Extra - asset_id: collision_camera_013
   * Layers: default
   * Pickup 197; Category? Minor
   * Extra - pickup_type: metroid
-  * Extra - spawngroup: SG_Gamma_001
+  * Extra - spawngroup: SG_Gamma_001_A
   > Inside Arena
       Trivial
 

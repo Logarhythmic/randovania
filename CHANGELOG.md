@@ -5,9 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.4.0] - 2023-11-??
+## [6.5.0] - 2023-11-??
+
+- Changed: The Changelog window has recieved a slight overhaul. The date of each release is shown, hyperlinks are fixed, and patch notes are now accessed through a drop-down box (previously used vertical tabs).
+- Changed: Trick level sliders ignore mouse scroll inputs, preventing unintended preset changes. 
+
+### Resolver
+
+- Fixed: Bug where damage constraints in chains were not understood correctly.
+- Fixed: Damage reductions from multiple suits are no longer multiplied together.
+- Improved: The output from the resolver now includes the node with the victory condition.
+- Improved: When using verbosity level High or above, the energy is displayed in the output.
 
 ### Metroid Dread
+
+- Fixed: The "Power Bomb Limitations" setting is now accounted for by logic.
 
 #### Logic Database
 
@@ -17,10 +29,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ##### Burenia
 
+- Added: Use Spin Boost with Wall Jump to climb from left to right at the top of Gravity Suit Tower.
 - Changed: The Early Gravity sequence now requires the Speed Booster Conservation trick set to Beginner.
 
 ##### Cataris
 
+- Added: Ledge warp out of the Diffusion Beam Room to avoid being trapped by the one way door and the blob.
 - Changed: The item in Dairon Transport Access now requires the Speed Booster Conservation trick set to Beginner.
 - Changed: The speed blocks leading to Underlava Puzzle Room 2 now require the Speed Booster Conservation trick set to Beginner or Power Bombs.
 
@@ -32,10 +46,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ##### Elun
 
+- Added: Elun's Save Station is now a valid starting room.
 - Changed: The item in Fan Room now requires the Speed Booster Conservation trick set to Beginner.
 
 ##### Ferenia
 
+- Added: Emmi Zone West Exit now has a Damage Boost trick to move from the center platform to the west door.
 - Changed: The item in Fan Room now requires the Speed Booster Conservation trick set to Beginner or Gravity Suit with door lock rando disabled.
 - Changed: The item in Speedboost Slopes Maze now requires the Speed Booster Conservation trick set to Beginner.
 - Changed: The Missile+ Tank in Space Jump Room now requires the Speed Booster Conservation trick set to Beginner.
@@ -45,9 +61,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed: Going up Right Entrance with Speed Booster now requires the Speed Booster Conservation trick set to Beginner.
 - Changed: The upper item in Golzuna Tower now requires the Speed Booster Conservation trick set to Beginner when using Spin Boost from the top.
 
-## [6.3.1] - 2023-10-??
+### Metroid Prime
+
+- Fixed: Counting normal damage reductions from suits twice.
+
+### Metroid Prime 2: Echoes
+
+- Added: One new Joke Hint refering to Raven Beak added to the pool
+
+## [6.4.1] - 2023-10-??
 
 - To be decided if needed.
+
+## [6.4.0] - 2023-10-05
+
+### Metroid Dread
+
+- Fixed: The "Power Bomb Limitations" setting is now accounted for by logic.
+
+### Metroid Prime:
+
+- Fixed: When room rando is enabled, cutscenes are no longer skippable to avoid a bug with elevators. This will be properly fixed in the future. 
 
 ## [6.3.0] - 2023-10-02
 
@@ -55,12 +89,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added: Data Visualizer now has a very visible checkbox to quickly toggle if the selected trick filters are enabled.
 - Added: When trick filters are enabled, a line is added indicating how many requirements are being filtered.
 - Changed: The generator will now consider placing Energy Tanks, if there's a damage requirement that's exactly high enough to kill the player.
-- Changed: The Changelog window has recieved a slight overhaul. The date of each release is shown, hyperlinks are fixed, and patch notes are now accessed through a drop-down box (previously used vertical tabs).
 - Fixed: The menu option for viewing all Randovania dependencies and their licenses has been restored.
 - Fixed: The generator should now handle cases with negative requirements a little better.
 - Fixed: Map tracker works again for Metroid Dread and Metroid Prime.
 
 ### Resolver
+
 - Fixed: Bug where nested requirements were combined wrongly.
 - Improved: Order of exploring certain dangerous events.
 
@@ -80,12 +114,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ##### Burenia
 
-- Added: Use Spin Boost with Wall Jump to climb from left to right at the top of Gravity Suit Tower.
 - Changed: Teleport to Ferenia: Using Speed Booster to get past the Shutter Gate now requires Speed Booster Conservation Beginner.
 
 ##### Cataris
 
-- Added: Ledge warp out of the Diffusion Beam Room to avoid being trapped by the one way door and the blob.
 - Changed: Thermal Device Room South: The connections to the thermal door that closes after using the thermal device now logically remains open when door lock rando is disabled and the "Can Slide" and "Shoot Beam" templates are satisfied. This is a handwave that makes the thermal device no longer a dangerous resource.
 - Changed: Single-wall Jump trick in Cataris Teleport to Artaria (Blue) now requires a slide jump.
 - Changed: Exclude Door above First Thermal Device from Door Randomization. Effectively making the First Thermal Device a safe action also when doors are randomized.

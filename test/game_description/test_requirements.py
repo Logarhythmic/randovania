@@ -218,12 +218,20 @@ def test_list_dangerous_resources(database, input_data, output_data):
     assert result == expected_result
 
 
-def test_set_dangerous_resources():
+def test_set_dangerous_resources(database):
     # setup
-    list_a = MagicMock()
-    list_b = MagicMock()
-    list_a.dangerous_resources = [1, 2, 3]
-    list_b.dangerous_resources = ["a", "b", "c"]
+    list_a = RequirementList(
+        [
+            ResourceRequirement.create(database.get_item("A"), 1, True),
+            ResourceRequirement.create(database.get_item("B"), 1, True),
+        ]
+    )
+    list_b = RequirementList(
+        [
+            ResourceRequirement.create(database.get_item("C"), 1, True),
+            ResourceRequirement.create(database.get_item("D"), 1, True),
+        ]
+    )
 
     req_set = RequirementSet([])
     req_set.alternatives = frozenset([list_a, list_b])
@@ -232,7 +240,7 @@ def test_set_dangerous_resources():
     result = set(req_set.dangerous_resources)
 
     # Assert
-    assert result == {1, 2, 3, "a", "b", "c"}
+    assert result == {database.get_item(c) for c in "ABCD"}
 
 
 def test_requirement_as_set_0(database):
@@ -907,3 +915,15 @@ def test_sort_resource_requirement(blank_game_description):
 
     result = sorted(requirements)
     assert result == list(reversed(requirements))
+
+
+def test_and_damage_satisfied(echoes_resource_database):
+    db = echoes_resource_database
+    req = ResourceRequirement.create(
+        db.get_by_type_and_index(ResourceType.DAMAGE, "Damage"),
+        50,
+        False,
+    )
+    and_req = RequirementAnd([req, req])
+
+    assert not and_req.satisfied(_empty_col(), 99, db)

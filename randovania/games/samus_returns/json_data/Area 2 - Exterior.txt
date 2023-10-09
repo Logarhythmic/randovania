@@ -214,7 +214,15 @@ Extra - asset_id: collision_camera_006
   > Tunnel to Spring Ball Tutorial
       Lay Any Bomb
   > Event - Arachnus
-      Trivial
+      All of the following:
+          Any of the following:
+              # Energy
+              Combat (Intermediate) or Normal Damage ≥ 199
+              Combat (Beginner) and Normal Damage ≥ 99
+          Any of the following:
+              # Damage
+              Missile ≥ 30 and Lay Bomb
+              Combat (Beginner) and Lay Power Bomb
 
 ----------------
 Spring Ball Tutorial
@@ -805,7 +813,7 @@ Extra - asset_id: collision_camera_033
 
 > Pickup (DNA); Heals? False
   * Layers: default
-  * Pickup 177; Category? Minor
+  * Pickup 177; Category? Major
   * Extra - pickup_type: metroid
   * Extra - spawngroup: SG_Alpha_001
   > Room Center
@@ -869,7 +877,7 @@ Extra - asset_id: collision_camera_035
 
 > Pickup (DNA); Heals? False
   * Layers: default
-  * Pickup 181; Category? Minor
+  * Pickup 181; Category? Major
   * Extra - pickup_type: metroid
   * Extra - spawngroup: SG_Alpha_005
   > Room Center

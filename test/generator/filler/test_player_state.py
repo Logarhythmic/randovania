@@ -52,8 +52,8 @@ def state_for_blank(
 def test_current_state_report(state_for_blank):
     result = state_for_blank.current_state_report()
     assert result == (
-        "At Intro/Hint Room/Hint no Translator after 0 actions and 0 pickups, "
-        "with 3 collected locations, 17 safe nodes.\n\n"
+        "At Intro/Heated Room/Pickup (Health) after 0 actions and 0 pickups, "
+        "with 4 collected locations, 20 safe nodes.\n\n"
         "Pickups still available: \n\n"
         "Resources to progress: Blue Key, Missile, Weapon\n\n"
         "Paths to be opened:\n"
@@ -64,7 +64,7 @@ def test_current_state_report(state_for_blank):
         "None\n"
         "\n"
         "Reachable nodes:\n"
-        "23 nodes total"
+        "26 nodes total"
     )
 
 
@@ -102,9 +102,9 @@ def test_filter_usable_locations(
     )
 
     raw = {
-        (state_for_blank, PickupIndex(0)): 1,
-        (state_for_blank, PickupIndex(1)): 1,
-        (second_state, PickupIndex(0)): 1,
+        (state_for_blank, PickupIndex(0)): 1.0,
+        (state_for_blank, PickupIndex(1)): 1.0,
+        (second_state, PickupIndex(0)): 1.0,
     }
     locations_weighted = WeightedLocations(copy.copy(raw))
     assert blank_wl.node_from_pickup_index(PickupIndex(0)).location_category == LocationCategory.MAJOR
