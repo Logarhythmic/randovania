@@ -96,7 +96,7 @@
    <item row="1" column="2">
     <widget class="QPushButton" name="customize_preset_button">
      <property name="text">
-      <string>Options</string>
+      <string>⚙</string>
      </property>
      <property name="toolTip">
       <string>Customize Selected Preset</string>

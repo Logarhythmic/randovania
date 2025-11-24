@@ -119,7 +119,7 @@ class Ui_SelectPresetWidget(object):
 #if QT_CONFIG(tooltip)
         self.delete_preset_button.setToolTip(QCoreApplication.translate("SelectPresetWidget", u"Delete Selected Preset", None))
 #endif // QT_CONFIG(tooltip)
-        self.customize_preset_button.setText(QCoreApplication.translate("SelectPresetWidget", u"Options", None))
+        self.customize_preset_button.setText(QCoreApplication.translate("SelectPresetWidget", u"\u2699", None))
 #if QT_CONFIG(tooltip)
         self.customize_preset_button.setToolTip(QCoreApplication.translate("SelectPresetWidget", u"Customize Selected Preset", None))
 #endif // QT_CONFIG(tooltip)

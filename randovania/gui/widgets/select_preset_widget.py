@@ -125,7 +125,9 @@ class SelectPresetWidget(QtWidgets.QWidget, Ui_SelectPresetWidget):
         # Signals
         self.create_preset_tree.itemSelectionChanged.connect(self._on_select_preset)
         self.create_preset_tree.customContextMenuRequested.connect(self._on_tree_context_menu)
-        self.create_new_preset_button.clicked.connect(self._on_create_new_preset)
+        self.add_preset_button.clicked.connect(self._on_create_new_preset)
+        self.delete_preset_button.clicked.connect(self._on_delete_preset)
+        self.customize_preset_button.clicked.connect(self._on_customize_preset)
 
         self._preset_menu.action_customize.triggered.connect(self._on_customize_preset)
         self._preset_menu.action_delete.triggered.connect(self._on_delete_preset)
@@ -140,6 +142,7 @@ class SelectPresetWidget(QtWidgets.QWidget, Ui_SelectPresetWidget):
 
         self._update_preset_tree_items()
         self.on_preset_changed(None)
+        self._update_button_states()
 
     def _update_preset_tree_items(self):
         self.create_preset_tree.update_items()
@@ -147,6 +150,22 @@ class SelectPresetWidget(QtWidgets.QWidget, Ui_SelectPresetWidget):
     @property
     def _current_preset_data(self) -> VersionedPreset | None:
         return self.create_preset_tree.current_preset_data
+
+    def _update_button_states(self):
+        """Update the enabled/disabled state of buttons based on current selection."""
+        preset = self._current_preset_data
+        has_preset = preset is not None
+        can_delete = has_preset and not preset.is_included_preset
+        can_customize = has_preset
+
+        try:
+            if preset is not None:
+                preset.get_preset()
+        except InvalidPreset:
+            can_customize = False
+
+        self.delete_preset_button.setEnabled(can_delete)
+        self.customize_preset_button.setEnabled(can_customize)
 
     def _add_new_preset(self, preset: VersionedPreset, *, parent: uuid.UUID | None):
         """
@@ -295,6 +314,7 @@ class SelectPresetWidget(QtWidgets.QWidget, Ui_SelectPresetWidget):
     def _on_select_preset(self):
         preset_data = self._current_preset_data
         self.on_preset_changed(preset_data)
+        self._update_button_states()
 
         if preset_data is not None:
             with self._options as options:
