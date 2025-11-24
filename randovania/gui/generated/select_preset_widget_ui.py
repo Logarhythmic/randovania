@@ -31,10 +31,35 @@ class Ui_SelectPresetWidget(object):
         self.create_layout.setContentsMargins(11, 11, 11, 11)
         self.create_layout.setObjectName(u"create_layout")
         self.create_layout.setContentsMargins(0, 0, 0, 0)
-        self.create_new_preset_button = QPushButton(SelectPresetWidget)
-        self.create_new_preset_button.setObjectName(u"create_new_preset_button")
+        self.create_preset_tree = PresetTreeWidget(SelectPresetWidget)
+        __qtreewidgetitem = QTreeWidgetItem(self.create_preset_tree)
+        __qtreewidgetitem1 = QTreeWidgetItem(__qtreewidgetitem)
+        QTreeWidgetItem(__qtreewidgetitem1)
+        QTreeWidgetItem(self.create_preset_tree)
+        self.create_preset_tree.setObjectName(u"create_preset_tree")
+        self.create_preset_tree.setMinimumSize(QSize(200, 0))
+        self.create_preset_tree.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.create_preset_tree.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.create_preset_tree.setDragDropMode(QAbstractItemView.InternalMove)
+        self.create_preset_tree.setAlternatingRowColors(False)
+        self.create_preset_tree.setRootIsDecorated(False)
 
-        self.create_layout.addWidget(self.create_new_preset_button, 0, 0, 1, 2)
+        self.create_layout.addWidget(self.create_preset_tree, 0, 0, 1, 3)
+
+        self.add_preset_button = QPushButton(SelectPresetWidget)
+        self.add_preset_button.setObjectName(u"add_preset_button")
+
+        self.create_layout.addWidget(self.add_preset_button, 1, 0, 1, 1)
+
+        self.delete_preset_button = QPushButton(SelectPresetWidget)
+        self.delete_preset_button.setObjectName(u"delete_preset_button")
+
+        self.create_layout.addWidget(self.delete_preset_button, 1, 1, 1, 1)
+
+        self.customize_preset_button = QPushButton(SelectPresetWidget)
+        self.customize_preset_button.setObjectName(u"customize_preset_button")
+
+        self.create_layout.addWidget(self.customize_preset_button, 1, 2, 1, 1)
 
         self.create_scroll_area = QScrollArea(SelectPresetWidget)
         self.create_scroll_area.setObjectName(u"create_scroll_area")
@@ -62,22 +87,7 @@ class Ui_SelectPresetWidget(object):
 
         self.create_scroll_area.setWidget(self.create_scroll_area_contents)
 
-        self.create_layout.addWidget(self.create_scroll_area, 2, 2, 1, 2)
-
-        self.create_preset_tree = PresetTreeWidget(SelectPresetWidget)
-        __qtreewidgetitem = QTreeWidgetItem(self.create_preset_tree)
-        __qtreewidgetitem1 = QTreeWidgetItem(__qtreewidgetitem)
-        QTreeWidgetItem(__qtreewidgetitem1)
-        QTreeWidgetItem(self.create_preset_tree)
-        self.create_preset_tree.setObjectName(u"create_preset_tree")
-        self.create_preset_tree.setMinimumSize(QSize(200, 0))
-        self.create_preset_tree.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.create_preset_tree.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.create_preset_tree.setDragDropMode(QAbstractItemView.InternalMove)
-        self.create_preset_tree.setAlternatingRowColors(False)
-        self.create_preset_tree.setRootIsDecorated(False)
-
-        self.create_layout.addWidget(self.create_preset_tree, 2, 0, 1, 2)
+        self.create_layout.addWidget(self.create_scroll_area, 0, 3, 2, 1)
 
 
         self.retranslateUi(SelectPresetWidget)
@@ -86,10 +96,8 @@ class Ui_SelectPresetWidget(object):
     # setupUi
 
     def retranslateUi(self, SelectPresetWidget):
-        self.create_new_preset_button.setText(QCoreApplication.translate("SelectPresetWidget", u"\uff0b Create New Preset", None))
-        self.create_preset_description.setText(QCoreApplication.translate("SelectPresetWidget", u"<html><head/><body><p>This content should have been replaced by code.</p></body></html>", None))
         ___qtreewidgetitem = self.create_preset_tree.headerItem()
-        ___qtreewidgetitem.setText(0, QCoreApplication.translate("SelectPresetWidget", u"Presets (Right click for actions)", None));
+        ___qtreewidgetitem.setText(0, QCoreApplication.translate("SelectPresetWidget", u"Presets", None));
 
         __sortingEnabled = self.create_preset_tree.isSortingEnabled()
         self.create_preset_tree.setSortingEnabled(False)
@@ -103,6 +111,19 @@ class Ui_SelectPresetWidget(object):
         ___qtreewidgetitem4.setText(0, QCoreApplication.translate("SelectPresetWidget", u"Metroid Prime 2", None));
         self.create_preset_tree.setSortingEnabled(__sortingEnabled)
 
+        self.add_preset_button.setText(QCoreApplication.translate("SelectPresetWidget", u"+", None))
+#if QT_CONFIG(tooltip)
+        self.add_preset_button.setToolTip(QCoreApplication.translate("SelectPresetWidget", u"Create New Preset", None))
+#endif // QT_CONFIG(tooltip)
+        self.delete_preset_button.setText(QCoreApplication.translate("SelectPresetWidget", u"\u00d7", None))
+#if QT_CONFIG(tooltip)
+        self.delete_preset_button.setToolTip(QCoreApplication.translate("SelectPresetWidget", u"Delete Selected Preset", None))
+#endif // QT_CONFIG(tooltip)
+        self.customize_preset_button.setText(QCoreApplication.translate("SelectPresetWidget", u"Options", None))
+#if QT_CONFIG(tooltip)
+        self.customize_preset_button.setToolTip(QCoreApplication.translate("SelectPresetWidget", u"Customize Selected Preset", None))
+#endif // QT_CONFIG(tooltip)
+        self.create_preset_description.setText(QCoreApplication.translate("SelectPresetWidget", u"<html><head/><body><p>This content should have been replaced by code.</p></body></html>", None))
         pass
     # retranslateUi
 
